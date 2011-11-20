@@ -1,0 +1,7 @@
+Autopilot
+
+This is a project to replace the analog electronics inside an old autopilot 
+for sail boats (Tillerpilot 2500) with an Arduino based system. This makes
+it possible to control the boat with short range radio modules, such as xbee 
+(ZigBee) and btbee (Bluetooth). Finally we will be able to control the boat
+with a smartphone. Bond would be jealous.
