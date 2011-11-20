@@ -7,6 +7,7 @@
 #include "joy.h"
 
 #define WAIT_TIME 5
+#define HOLD_TIME (5*30/WAIT_TIME)
 static volatile uint8_t wait_time;
 
 ISR(TIMER2_OVF_vect) 
@@ -18,6 +19,7 @@ ISR(TIMER2_OVF_vect)
 int main(void)
 {
     int joy_new, joy = 0;
+    uint8_t hold_xbee = 0;
 
     DDRB  |= (1<<DDB5);  // LED
     LED_ON;
@@ -38,8 +40,13 @@ int main(void)
             wait_time = WAIT_TIME;
             joy_new = joy_get();
             if (joy_new || joy) {
+                xbee_on();
+                hold_xbee = HOLD_TIME;
                 joy = joy_new;
                 xbee_printf("$J %d\r", joy);
+            } else {
+                if (hold_xbee > 0) hold_xbee--;
+                else xbee_off();
             }
         }
         set_sleep_mode(SLEEP_MODE_IDLE);

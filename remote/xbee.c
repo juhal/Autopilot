@@ -16,6 +16,8 @@ void xbee_init()
     #else
     UCSR0A &= ~(1<<U2X0);
     #endif
+    DDRD |= (1<<DDD2); // Sleep_RQ
+    xbee_off();
 }
 
 void xbee_putc(char c)
@@ -43,4 +45,14 @@ void xbee_printf(const char *fmt, ...)
     va_end(ap);
     
     xbee_write(buf, MIN(n,sizeof(buf)));
+}
+
+void xbee_on(void)
+{
+    PORTD &= ~(1<<2);
+}
+
+void xbee_off(void)
+{
+    PORTD |= (1<<2);
 }
