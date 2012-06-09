@@ -34,6 +34,7 @@ implements OnClickListener, OnSharedPreferenceChangeListener, LocationListener {
 	private State state;
 	private float targetCourse;
 	private float currentCourse;
+	private float currentSpeed;
 	private TextView courseView;
 	private TextView targetCourseView;
 	private TextView driveView;
@@ -183,7 +184,8 @@ implements OnClickListener, OnSharedPreferenceChangeListener, LocationListener {
     	this.state.onCourseUpdated(course);
     }
     
-    public void setSpeed(float speed) { 
+    public void setSpeed(float speed) {
+    	currentSpeed = speed;
     	this.state.onSpeedUpdated(speed);
     }
 
@@ -209,6 +211,10 @@ implements OnClickListener, OnSharedPreferenceChangeListener, LocationListener {
 
 	public float getTargetCourse() {
 		return targetCourse;
+	}
+	
+	public float getCurrentSpeed() {
+		return currentSpeed;
 	}
 	
 	@Override
@@ -294,12 +300,12 @@ implements OnClickListener, OnSharedPreferenceChangeListener, LocationListener {
 	
 	private class StateAutoPilot extends State {
 		
-		private KalmanController controller;
+		private Controller controller;
 		
 		@Override
 		public void onEnter() {
 			autoButton.setChecked(true);
-			controller = new KalmanController(AndropilotActivity.this);
+			controller = new Controller(AndropilotActivity.this);
 			controller.start();
 		}
 		@Override

@@ -12,46 +12,47 @@
 		android:defaultValue=""
 		android:persistent="true"/>
 	<EditTextPreference 
-	    android:key="a1"
-	    android:title="a1"
-	    android:summary="Peräsinkulman suuntakerroin"
+	    android:key="dt"
+	    android:title="&#x394;t"
+	    android:summary="Ohjausalgoritmin päivitysintervalli (s)"
 	    android:numeric="decimal|signed"
-	    android:defaultValue="1.0"
+	    android:defaultValue="0.5"
 	    android:persistent="true"/>
+	<EditTextPreference 
+	    android:key="tp"
+	    android:title="Tp"
+	    android:summary="Pinnan kääntymisaika (s)"
+	    android:numeric="decimal"
+	    android:defaultValue="2.5"
+	    android:persistent="true"/>
+	<EditTextPreference 
+	    android:key="tv"
+	    android:title="Tv"
+	    android:summary="Veneen pyörähdysaika (s)"
+	    android:numeric="decimal"
+	    android:defaultValue="50"
+	    android:persistent="true"/>	
+	
 	<EditTextPreference 
 	    android:key="q1"
-	    android:title="q1"
+	    android:title="Q1"
 	    android:summary="Suunnan epävarmuus"
 	    android:numeric="decimal"
-	    android:defaultValue="1.0"
-	    android:persistent="true"/>
-	<EditTextPreference 
-	    android:key="q2"
-	    android:title="q2"
-	    android:summary="Peräsinkulman epävarmuus"
-	    android:numeric="decimal"
-	    android:defaultValue="1.0"
+	    android:defaultValue="2.0"
 	    android:persistent="true"/>
 	<EditTextPreference 
 	    android:key="r"
-	    android:title="r"
+	    android:title="R"
 	    android:summary="Mittauksen epävarmuus"
 	    android:numeric="decimal"
-	    android:defaultValue="1.0"
+	    android:defaultValue="2.0"
 	    android:persistent="true"/>
 	<EditTextPreference 
 	    android:key="g1"
-	    android:title="g1"
+	    android:title="G1"
 	    android:summary="Suunnan ohjauskerroin"
 	    android:numeric="decimal|signed"
-	    android:defaultValue="1.0"
-	    android:persistent="true"/>
-	<EditTextPreference 
-	    android:key="g2"
-	    android:title="g2"
-	    android:summary="Peräsinkulman ohjauskerroin"
-	    android:numeric="decimal|signed"
-	    android:defaultValue="1.0"
+	    android:defaultValue="15.0"
 	    android:persistent="true"/>
 
 </PreferenceScreen>
