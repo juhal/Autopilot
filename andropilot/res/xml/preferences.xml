@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference 
+        android:key="useCompass"
+        android:title="Käytä kompassia"
+        android:summary="Käytetäänkö kompassia vai GPS:n antamaa suuntaa."
+        android:persistent="true"/>
+	<ListPreference
+		android:key="helmId"
+		android:title="Autopilotin tunniste"
+		android:summary="Autopilotin Bluetooth tunniste"
+		android:defaultValue=""
+		android:persistent="true"/>
+	<EditTextPreference 
+	    android:key="a1"
+	    android:title="a1"
+	    android:summary="Peräsinkulman suuntakerroin"
+	    android:numeric="decimal|signed"
+	    android:defaultValue="1.0"
+	    android:persistent="true"/>
+	<EditTextPreference 
+	    android:key="q1"
+	    android:title="q1"
+	    android:summary="Suunnan epävarmuus"
+	    android:numeric="decimal"
+	    android:defaultValue="1.0"
+	    android:persistent="true"/>
+	<EditTextPreference 
+	    android:key="q2"
+	    android:title="q2"
+	    android:summary="Peräsinkulman epävarmuus"
+	    android:numeric="decimal"
+	    android:defaultValue="1.0"
+	    android:persistent="true"/>
+	<EditTextPreference 
+	    android:key="r"
+	    android:title="r"
+	    android:summary="Mittauksen epävarmuus"
+	    android:numeric="decimal"
+	    android:defaultValue="1.0"
+	    android:persistent="true"/>
+	<EditTextPreference 
+	    android:key="g1"
+	    android:title="g1"
+	    android:summary="Suunnan ohjauskerroin"
+	    android:numeric="decimal|signed"
+	    android:defaultValue="1.0"
+	    android:persistent="true"/>
+	<EditTextPreference 
+	    android:key="g2"
+	    android:title="g2"
+	    android:summary="Peräsinkulman ohjauskerroin"
+	    android:numeric="decimal|signed"
+	    android:defaultValue="1.0"
+	    android:persistent="true"/>
+
+</PreferenceScreen>

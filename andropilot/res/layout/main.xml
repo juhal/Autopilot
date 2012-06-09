@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    
+	    <Button
+	        android:id="@+id/holdButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:height="80dp"
+	        android:text="Pidä suunta"
+	        android:width="80dp" />
+	    
+	    <ToggleButton
+	        android:id="@+id/targetButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:height="80dp"
+	        android:textOn="Aseta suunta"
+	        android:textOff="Aseta suunta"
+	        android:width="80dp" />
+	    
+	</LinearLayout>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/bearingLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Kurssi"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/bearingView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="---"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/targetBearingLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Tavoitekurssi"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/targetBearingView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="---"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/driveLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Ohjaus"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/driveView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="0"
+            android:textSize="50dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    
+	    <ToggleButton
+	        android:id="@+id/autoButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:height="80dp"
+	        android:textOn="Auto-ohjaus"
+	        android:textOff="Auto-ohjaus"
+	        android:width="80dp" />
+	    
+	    <ToggleButton
+	        android:id="@+id/manualButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:height="80dp"
+	        android:textOn="Käsiohjaus"
+	        android:textOff="Käsiohjaus"
+	        android:width="80dp" />
+	</LinearLayout>
+   
+</RelativeLayout>

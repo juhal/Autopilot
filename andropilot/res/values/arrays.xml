@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bearingSourceEntries">
+        <item>Kompassi</item>
+        <item>GPS</item>
+    </string-array>
+
+    <string-array name="bearingSourceValues">
+        <item>compass</item>
+        <item>gps</item>
+    </string-array>
+</resources>
